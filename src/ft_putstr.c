@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ainga-ri <ainga-ri@student.42barcel>       +#+  +:+       +#+        */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 13:18:19 by ainga-ri          #+#    #+#             */
-/*   Updated: 2022/06/20 13:20:51 by ainga-ri         ###   ########.fr       */
+/*   Created: 2022/06/29 18:16:46 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/29 18:19:56 by msindreu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../li/ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (str[i] != '\0')
 	{
-		write(fd, &s[i], sizeof(s[i]));
+		write (1, &(str + i), 1);
 		i++;
 	}
+	return (i);
 }
