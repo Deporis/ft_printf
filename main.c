@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ainga-ri <ainga-ri@student.42barcel>       +#+  +:+       +#+        */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 13:12:25 by ainga-ri          #+#    #+#             */
-/*   Updated: 2022/06/20 13:12:27 by ainga-ri         ###   ########.fr       */
+/*   Created: 2022/06/28 19:54:33 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/29 18:21:31 by msindreu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putchar_fd(char c, int fd)
+#include "lib/ft_printf.h"
+int main ()
 {
-	write(fd, &c, sizeof(c));
+	int c;
+
+	c = 'F';
+	printf("valor original: %d\n", printf("hola ferran % %%\n", c));
+	printf("valor ft: %d\n", ft_printf("hola ferran %c %%\n", c));
+
+
 }
