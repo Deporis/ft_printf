@@ -6,7 +6,7 @@
 /*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:54:33 by msindreu          #+#    #+#             */
-/*   Updated: 2022/06/29 18:21:31 by msindreu         ###   ########.fr       */
+/*   Updated: 2022/06/30 17:28:51 by msindreu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main (void)
 	*/
 
 	/* Test for %p */
-	char *str2 = "V";
-	printf("valor original: %d\n", printf("%s %p\n", str2, str2));
+	char *str2 = "eevee";
+	//printf("valor original: %d\n", printf("%s %p\n", str2, str2));
 	printf("valor ft: %d\n", ft_printf("%s %p\n", str2, str2)); 
 	return (0);
 }
