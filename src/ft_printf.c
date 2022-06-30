@@ -18,8 +18,10 @@ int	ft_check(va_list argument, char type)
 		return (ft_putchar(va_arg(argument, int)));
 	if (type == '%')
 		return (ft_putchar('%'));
-	//if (type == s)
-	//	return (ft_putstr(va_arg(argument, char *);
+	if (type == 's')
+		return (ft_putstr(va_arg(argument, char *)));
+	if (type == 'p')
+		return (ft_putpointer(va_arg(argument, char *)));
 	//if (type == d)
 //	return (ft_putnbr(va_arg(argument, int);
 	return(0);
@@ -28,23 +30,27 @@ int	ft_check(va_list argument, char type)
 int ft_printf(const char *str, ...)
 {
 	int	len;
+	int	i;
 	va_list argument;
 
 	len = 0;
+	i = 0;
 	va_start(argument, str);
 
-	while (str[len] != '\0')
+	while (str[i] != '\0')
 	{
-		if (str[len] == '%')
+		if (str[i] == '%')
 		{
-			len = len + ft_check(argument, str[len + 1]);
+			len = i + ft_check(argument, str[i + 1]);
+			i++;
 		}
 		else
 		{
-			ft_putchar(str[len]);
+			ft_putchar(str[i]);
+			len++;
 		}
-		len++;
+		i++;
 	}
 	va_end(argument);
-	return (len - 2);
+	return (len);
 }
