@@ -1,31 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putpointer.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/30 16:31:18 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/30 17:28:55 by msindreu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../lib/ft_printf.h"
 int	ft_putpointer(char *ptr)
 {
-	int i = 0;
-	while (ptr[i])
+	int i;
+	
+	i = 0;
+	printf("Address: %p\n", ptr);
+
+	/* 
+	 * We get a string, which has an address, that address is in hedaxdecimal
+	 * just with a cast we transofrm hexa to decimal look below: (unsigned long)
+	 * */
+	printf("Address value as int: %lu\n", (unsigned long) ptr);
+	/*
+	 * We need to divide by 16 to get the rest and the last one the quocient
+	 * just like a putnbr.
+	 * */
+	while(ptr[i])
 	{
-		printf("%c\n", (char)(&ptr)[i] - 20);
+		write(1, &(ptr[i]), 1);
 		i++;
 	}
-	/*
-	//char *ptr10;
-	// *ptr10 = ptr; //en base 10	
-	//printf("putpointer function %p == string %s\n", ptr, ptr10);
-	size_t address = (size_t) ptr; // index + 2 [0, x, 1]
-	printf("adress of ptr? %zu\n", address);
-	int i = 0;
-	//char c;
-	write(1, "Is it equal to original? ", 26);
-	char c = address;
-	write(1, &c, 1);
-	write(1, "\n", 1);
-	
-	while (address[i])
-	{
-		c = 65; // *(address + i);
-		write(1, &c, 1);
-		i++;	
-	}
-	*/
 	return (10);
 }
