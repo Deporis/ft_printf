@@ -21,7 +21,11 @@ int	ft_check(va_list argument, char type)
 	if (type == 's')
 		return (ft_putstr(va_arg(argument, char *)));
 	if (type == 'p')
-		return (ft_putpointer(va_arg(argument, char *)));
+	{
+		write(1, "0x", 2);
+		ft_putpointer(va_arg(argument, unsigned long));
+		return (11);
+	}
 	//if (type == d)
 //	return (ft_putnbr(va_arg(argument, int);
 	return(0);
@@ -41,7 +45,9 @@ int ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
+			printf("\nantes: %d\n", len);
 			len = i + ft_check(argument, str[i + 1]);
+			printf("\ndespues: %d\n", len);
 			i++;
 		}
 		else

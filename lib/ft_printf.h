@@ -21,6 +21,6 @@ int		ft_printf(const char *str, ...);
 int		ft_putchar(int c);
 int		ft_check(va_list argument, char type);
 int		ft_putstr(char *str);
-int		ft_putpointer(char *ptr);
+void		ft_putpointer(unsigned long ptr);
 
 #endif
