@@ -31,9 +31,12 @@ int main (void)
 	*/
 
 	/* Test for %p */
+	/*
 	char *str2 = "eevee";
-	printf("valor original: %d\n", printf("%s %p", str2, str2));
-	printf("valor ft: %d\n", ft_printf("%s %p", str2, str2)); 
-
+	printf("valor original: %d\n", printf("%s %p\n", str2, str2));
+	printf("valor ft: %d\n", ft_printf("%s %p\n", str2, str2)); 
+	*/
+	int b = 0xFAFA;	
+	printf("Funciona?? se convierte en lu? %lu\n", (unsigned long)b);
 	return (0);
 }
