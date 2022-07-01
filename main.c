@@ -6,7 +6,7 @@
 /*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:54:33 by msindreu          #+#    #+#             */
-/*   Updated: 2022/06/30 17:28:51 by msindreu         ###   ########.fr       */
+/*   Updated: 2022/07/01 17:52:16 by msindreu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int main (void)
 	printf("valor ft: %d\n", ft_printf("%s %p\n", str2, str2)); 
 	*/
 	int b = 0xFAFA;	
-	printf("Funciona?? se convierte en lu? %lu\n", (unsigned long)b);
+	printf("Funciona?? se convierte en lu? %d\n", b);
 	return (0);
 }
