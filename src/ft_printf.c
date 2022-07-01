@@ -43,11 +43,15 @@ int ft_printf(const char *str, ...)
 
 	while (str[i] != '\0')
 	{
+		//printf("valor del iterador %d\n", i);
 		if (str[i] == '%')
 		{
-			printf("\nantes: %d\n", len);
-			len = i + ft_check(argument, str[i + 1]);
-			printf("\ndespues: %d\n", len);
+			//printf("\nantes: %d\n", len);
+			//printf("%c\n", str[i + 1]);
+			// i = 3 y ft_check del pupointer es 11 ======= 14, tendria
+			//  que sumar lo que habia antes en el len
+			len = len + ft_check(argument, str[i + 1]);
+			//printf("\ndespues: %d\n", len);
 			i++;
 		}
 		else

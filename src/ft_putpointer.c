@@ -13,7 +13,6 @@
 #include "../lib/ft_printf.h"
 void	ft_putpointer(unsigned long ptr)
 {
-	int n;
 	/* 
 	 * We get a string, which has an address, that address is in hexadecimal
 	 * just with a cast we transofrm hexa to decimal look below: (unsigned long)
@@ -31,8 +30,8 @@ void	ft_putpointer(unsigned long ptr)
 	else
 	{
 		if (ptr < 10)
-			n = ft_putchar(ptr + 48);
+			ft_putchar(ptr + 48);
 		else
-			n = ft_putchar(ptr + 87);		
+			ft_putchar(ptr + 87);		
 	}
 }
