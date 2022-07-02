@@ -14,10 +14,8 @@
 int main (void)
 {
 	/* Test for %c and %% */
-	
 	/*
 	int c;
-
 	c = 'F';
 	printf("valor original: %d\n", printf("hola ferran %c %%\n", c));
 	printf("valor ft: %d\n", ft_printf("hola ferran %c %%\n", c));
@@ -31,13 +29,32 @@ int main (void)
 	*/
 
 	/* Test for %p */
-	
+	/*
 	char *str2 = "eevee";
 	printf("valor original: %d\n", printf("%s %p\n", str2, str2));
 	printf("valor ft: %d\n", ft_printf("%s %p\n", str2, str2)); 
+	*/
+
+	/* Test for %d and %i */
+	/*
+	int b = -234239283;
+	printf("valor original: %d\n", printf("Mar %d\n", b));	
+	printf("valor ft: %d\n", ft_printf("Mar %d\n", b)); 
+	*/
 	
-	//int b = 0xFAFA;	
-	//printf("Funciona?? se convierte en lu? %d\n", b);
+	/* Test for %u */
 	
+	/*
+	When printing a %u, if the value is negative, it rests the max value of an unsigned int
+	and the negative value + 1:
+	max value of unsigned int: 4294967295
+	value n = -1
+	result with %u is 42949627295 - 1 + 1 = 42949627294
+	*/
+	int n1 = -1;
+	unsigned int n2 = -1;
+	printf("valor original: %d\n", printf("%u %u\n", n1, n2));
+	printf("valor ft: %d\n", ft_printf("%u %u\n", n1, n2));
+
 	return (0);
 }
