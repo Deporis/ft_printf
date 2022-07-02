@@ -22,5 +22,7 @@ int		ft_putchar(int c);
 int		ft_check(va_list argument, char type);
 int		ft_putstr(char *str);
 void		ft_putpointer(unsigned long ptr);
-
+void		ft_putnbr(int n);
+size_t		ft_strlen(const char *s);
+char*		ft_itoa(int n);
 #endif
