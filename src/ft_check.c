@@ -14,20 +14,17 @@ int	ft_check(va_list argument, char type)
 	}
 	else if (type == 'd' || type == 'i')
 	{
-		int tmp = va_arg(argument, int);
-		//ft_putnbr(va_arg(argument, int));
-		ft_putnbr(tmp);
-		return ((int)ft_strlen(ft_itoa(tmp)));
+		return (ft_putnbr(va_arg(argument, int)));
 	}	
 	else if (type == 'u')
 	// I would replicate putnbr but with unsigned ints, so it can be represented
 	// and also the transformation its done when casting, so we don't need to 
 	// worry with the difference with max value of the unsigned number
 	{
-		unsigned int tmp = va_arg(argument, unsigned int);
-		ft_putnbr(tmp); //no podra representar el max numero de unsigned number
-		return ((int)ft_strlen(ft_itoa(tmp)));
-		//return ft_unsigned_putnbr(va_arg(argument, unsigned int));
+		//unsigned int tmp = va_arg(argument, unsigned int);
+		//ft_putnbr(tmp); //no podra representar el max numero de unsigned number
+		//return ((int)ft_strlen(ft_itoa(tmp)));
+		return (ft_putui(va_arg(argument, unsigned int)));
 	}
 	//TODO
 	//else if (type == 'x')
