@@ -37,7 +37,7 @@ int main (void)
 
 	/* Test for %d and %i */
 	/*
-	int b = -234239283;
+	int b = 7598642;
 	printf("valor original: %d\n", printf("Mar %d\n", b));	
 	printf("valor ft: %d\n", ft_printf("Mar %d\n", b)); 
 	*/
@@ -51,10 +51,11 @@ int main (void)
 	value n = -1
 	result with %u is 42949627295 - 1 + 1 = 42949627294
 	*/
-	int n1 = -1;
-	unsigned int n2 = -1;
+	
+	int n1 = 179384;
+	unsigned int n2 = 179384;
 	printf("valor original: %d\n", printf("%u %u\n", n1, n2));
 	printf("valor ft: %d\n", ft_printf("%u %u\n", n1, n2));
-
+	
 	return (0);
 }
