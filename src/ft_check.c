@@ -9,29 +9,20 @@ int	ft_check(va_list argument, char type)
 	else if (type == 'p')
 	{
 		write(1, "0x", 2);
-		ft_putpointer(va_arg(argument, unsigned long));
-		return (11);
+		return (ft_putpointer(va_arg(argument, unsigned long)) + 2);
 	}
 	else if (type == 'd' || type == 'i')
 	{
 		return (ft_putnbr(va_arg(argument, int)));
 	}	
 	else if (type == 'u')
-	// I would replicate putnbr but with unsigned ints, so it can be represented
-	// and also the transformation its done when casting, so we don't need to 
-	// worry with the difference with max value of the unsigned number
 	{
-		//unsigned int tmp = va_arg(argument, unsigned int);
-		//ft_putnbr(tmp); //no podra representar el max numero de unsigned number
-		//return ((int)ft_strlen(ft_itoa(tmp)));
 		return (ft_putui(va_arg(argument, unsigned int)));
 	}
-	//TODO
-	//else if (type == 'x')
-		// return number in hexadecimal in lowecase
-	//TODO
-	//else if (type == 'X')
-		// return number in hex in uppercase .toUpperCase
+	else if (type == 'x')
+		return (ft_putlower(va_arg(argument, unsigned long)));
+	else if (type == 'X')
+		return (ft_putupper(va_arg(argument, unsigned long)));
 	else if (type == '%')
 		return (ft_putchar('%'));
 	return(0);

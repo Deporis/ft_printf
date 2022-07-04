@@ -11,27 +11,22 @@
 /* ************************************************************************** */
 
 #include "../lib/ft_printf.h"
-void	ft_putpointer(unsigned long ptr)
+int	ft_putpointer(unsigned long ptr)
 {
-	/* 
-	 * We get a string, which has an address, that address is in hexadecimal
-	 * just with a cast we transofrm hexa to decimal look below: (unsigned long)
-	 * */
-	//printf("Address value as int: %lu\n", (unsigned long) ptr);
-	/*
-	 * We need to divide by 16 to get the rest and the last one the quocient
-	 * just like a putnbr.
-	 * */
+	int len;
+
+	len = 0;
 	if (ptr >= 16)
 	{
-		ft_putpointer(ptr / 16);
-		ft_putpointer(ptr % 16);
+		return (ft_putpointer(ptr / 16) + ft_putpointer(ptr % 16));
 	}
 	else
 	{
 		if (ptr < 10)
 			ft_putchar(ptr + 48);
 		else
-			ft_putchar(ptr + 87);		
+			ft_putchar(ptr + 87);
+		len++;
 	}
+	return (len);
 }

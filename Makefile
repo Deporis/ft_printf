@@ -1,12 +1,12 @@
-NAME = libftprintf.a
+#NAME = libftprintf.a
 
-CC = gcc
+#CC = gcc
 
-CFLAGS = -Wall -Wextra -Wextra
+#CFLAGS = -Wall -Wextra -Wextra
 
-SRC = test.c
+#SRC = test.c
 
-OBJS = $(SRCS:.C=.O)
+#OBJS = $(SRCS:.C=.O)
 
-%.o : %.c libftprintf.h
-	$(CC) $(CFLAGS) -I./ -c $< -o $@
+#%.o : %.c libftprintf.h
+#	$(CC) $(CFLAGS) -I./ -c $< -o $@

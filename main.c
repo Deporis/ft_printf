@@ -45,17 +45,21 @@ int main (void)
 	/* Test for %u */
 	
 	/*
-	When printing a %u, if the value is negative, it rests the max value of an unsigned int
-	and the negative value + 1:
-	max value of unsigned int: 4294967295
-	value n = -1
-	result with %u is 42949627295 - 1 + 1 = 42949627294
-	*/
 	
 	int n1 = 179384;
 	unsigned int n2 = 179384;
 	printf("valor original: %d\n", printf("%u %u\n", n1, n2));
 	printf("valor ft: %d\n", ft_printf("%u %u\n", n1, n2));
+	*/
+
+	/* Test for %x */
+	
+	int x1 = 0x4F;
+	int x2 = -10;
+	//Does the conversion itself?
+	printf("%i, %i\n", x1, x2);
+	printf("valor original: %d\n", printf("in hexa: %X | in dec to hexa: %X\n", x1, x2));	
+	printf("valor ft: %d\n", ft_printf("in hexa: %X | in dec to hexa: %X\n", x1, x2));
 	
 	return (0);
 }
