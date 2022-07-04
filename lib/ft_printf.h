@@ -21,7 +21,9 @@ int		ft_printf(const char *str, ...);
 int		ft_putchar(int c);
 int		ft_check(va_list argument, char type);
 int		ft_putstr(char *str);
-void		ft_putpointer(unsigned long ptr);
+int		ft_putpointer(unsigned long ptr);
 int		ft_putnbr(int n);
 int		ft_putui(unsigned int u);
+int		ft_putlower(unsigned long n);
+int		ft_putupper(unsigned long n);
 #endif
