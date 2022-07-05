@@ -1,5 +1,5 @@
 #include "../lib/ft_printf.h"
-int	ft_putlower(unsigned long n)
+int	ft_putlower(unsigned int n)
 {
 	int len;
 
