@@ -1,5 +1,5 @@
 #include "../lib/ft_printf.h"
-int	ft_putupper(unsigned long n)
+int	ft_putupper(unsigned int n)
 {
 	int len;
 	len = 0;

@@ -26,12 +26,23 @@ int ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
+		/*
+			int n = ft_check(argument, str[i + 1]);
+			if (n == -1)
+				return (-1);
+			else
+				len = len + n;
+		*/
 			len = len + ft_check(argument, str[i + 1]);
 			i++;
 		}
 		else
 		{
+			//int n = 
 			ft_putchar(str[i]);
+			//if (n == -1)
+			//	return (-1);
+			//else
 			len++;
 		}
 		i++;
