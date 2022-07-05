@@ -9,14 +9,16 @@ int ft_putnbr(int n)
 	len = 0;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		if (ft_putchar('-') == -1)
+			return (-1);
 		i = -i;
 		n = -n;
 		len++;
 	}
 	if (i < 10)
 	{
-		ft_putchar(48 + n);
+		if (ft_putchar(48 + n) == -1)
+			return (-1);
 		len++;
 	}
 	else
