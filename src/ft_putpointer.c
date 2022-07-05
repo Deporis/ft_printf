@@ -23,9 +23,15 @@ int	ft_putpointer(unsigned long ptr)
 	else
 	{
 		if (ptr < 10)
-			ft_putchar(ptr + 48);
+		{
+			if (ft_putchar(ptr + 48) == -1)
+				return (-1);
+		}
 		else
-			ft_putchar(ptr + 87);
+		{
+			if (ft_putchar(ptr + 87) == -1)
+				return (-1);
+		}
 		len++;
 	}
 	return (len);

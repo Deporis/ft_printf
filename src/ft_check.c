@@ -8,7 +8,8 @@ int	ft_check(va_list argument, char type)
 		return (ft_putstr(va_arg(argument, char *)));
 	else if (type == 'p')
 	{
-		write(1, "0x", 2);
+		if (write(1, "0x", 2) == -1)
+			return (-1);
 		return (ft_putpointer(va_arg(argument, unsigned long)) + 2);
 	}
 	else if (type == 'd' || type == 'i')
