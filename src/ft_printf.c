@@ -16,6 +16,7 @@ int ft_printf(const char *str, ...)
 {
 	int	len;
 	int	i;
+	int	n;
 	va_list argument;
 
 	len = 0;
@@ -26,24 +27,29 @@ int ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-		/*
-			int n = ft_check(argument, str[i + 1]);
+		
+			n = ft_check(argument, str[i + 1]);
 			if (n == -1)
+			{
+				//va_end(argument);
 				return (-1);
-			else
-				len = len + n;
-		*/
+			}
+			len = len + n;
+			i++;
+			/*
 			len = len + ft_check(argument, str[i + 1]);
 			i++;
+		*/
 		}
 		else
 		{
-			//int n = 
-			ft_putchar(str[i]);
-			//if (n == -1)
-			//	return (-1);
-			//else
-			len++;
+			if (ft_putchar(str[i]) == -1)
+			{
+				//va_end(argument);
+				return (-1);
+			}
+			else
+				len++;
 		}
 		i++;
 	}
