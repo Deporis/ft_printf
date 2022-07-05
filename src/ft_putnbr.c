@@ -11,6 +11,7 @@ int ft_putnbr(int n)
 	{
 		ft_putchar('-');
 		i = -i;
+		n = -n;
 		len++;
 	}
 	if (i < 10)

@@ -38,8 +38,8 @@ int main (void)
 	/* Test for %d and %i */
 	/*
 	int b = 7598642;
-	printf("valor original: %d\n", printf("Mar %d\n", b));	
-	printf("valor ft: %d\n", ft_printf("Mar %d\n", b)); 
+	printf("valor original: %d\n", printf("%d%dd%d\n", 1, 2, -3));	
+	printf("valor ft: %d\n", ft_printf("%d%dd%d\n", 1, 2, -3)); 
 	*/
 	
 	/* Test for %u */
@@ -53,13 +53,16 @@ int main (void)
 	*/
 
 	/* Test for %x */
-	
+	/*
 	int x1 = 0x4F;
 	int x2 = -10;
 	//Does the conversion itself?
 	printf("%i, %i\n", x1, x2);
 	printf("valor original: %d\n", printf("in hexa: %X | in dec to hexa: %X\n", x1, x2));	
 	printf("valor ft: %d\n", ft_printf("in hexa: %X | in dec to hexa: %X\n", x1, x2));
+	*/
+	printf("%d\n", printf(" %x ", 9223372036854775807));
+	printf("%d\n", ft_printf(" %x ", 9223372036854775807));
 	
 	return (0);
 }

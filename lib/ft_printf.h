@@ -24,6 +24,6 @@ int		ft_putstr(char *str);
 int		ft_putpointer(unsigned long ptr);
 int		ft_putnbr(int n);
 int		ft_putui(unsigned int u);
-int		ft_putlower(unsigned long n);
-int		ft_putupper(unsigned long n);
+int		ft_putlower(unsigned int n);
+int		ft_putupper(unsigned int n);
 #endif
