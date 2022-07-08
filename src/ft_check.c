@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 19:33:02 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/29 17:37:53 by msindreu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../lib/ft_printf.h"
 
 int	ft_check(va_list argument, char type)
@@ -26,5 +38,5 @@ int	ft_check(va_list argument, char type)
 		return (ft_putupper(va_arg(argument, unsigned long)));
 	else if (type == '%')
 		return (ft_putchar('%'));
-	return(0);
+	return (0);
 }
