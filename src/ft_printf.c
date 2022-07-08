@@ -12,45 +12,43 @@
 
 #include "../lib/ft_printf.h"
 
-int ft_printf(const char *str, ...)
+static int	ft_condition(const char *str, int *i, va_list argument, int len)
 {
-	int	len;
-	int	i;
 	int	n;
-	va_list argument;
+
+	n = 0;
+	if (str[*i] == '%')
+	{
+		n = ft_check(argument, str[*i + 1]);
+		if (n == -1)
+			return (-1);
+		len = len + n;
+		*i = *i + 1;
+	}
+	else
+	{
+		if (ft_putchar(str[*i]) == -1)
+			return (-1);
+		else
+			len++;
+	}
+	return (len);
+}
+
+int	ft_printf(const char *str, ...)
+{
+	int		len;
+	int		i;
+	va_list	argument;
 
 	len = 0;
 	i = 0;
 	va_start(argument, str);
-
 	while (str[i] != '\0')
 	{
-		if (str[i] == '%')
-		{
-		
-			n = ft_check(argument, str[i + 1]);
-			if (n == -1)
-			{
-				//va_end(argument);
-				return (-1);
-			}
-			len = len + n;
-			i++;
-			/*
-			len = len + ft_check(argument, str[i + 1]);
-			i++;
-		*/
-		}
-		else
-		{
-			if (ft_putchar(str[i]) == -1)
-			{
-				//va_end(argument);
-				return (-1);
-			}
-			else
-				len++;
-		}
+		len = ft_condition(str, &i, argument, len);
+		if (len == -1)
+			return (-1);
 		i++;
 	}
 	va_end(argument);
