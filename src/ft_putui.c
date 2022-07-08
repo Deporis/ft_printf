@@ -7,10 +7,13 @@ int ft_putui(unsigned int u)
 	len = 0;
 	if (u < 10)
 	{
-		ft_putchar(48 + u);
+		if (ft_putchar(48 + u) == -1)
+			return (-1);
 		len++;
 	}
 	else
-		return (ft_putnbr(u / 10) + ft_putnbr(u % 10));
+	{
+		return (ft_protect(u, 10, ft_putui));
+	}
 	return (len);
 }
