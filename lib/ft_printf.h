@@ -22,8 +22,9 @@ int		ft_putchar(int c);
 int		ft_check(va_list argument, char type);
 int		ft_putstr(char *str);
 int		ft_putpointer(unsigned long ptr);
-int		ft_putnbr(int n);
+int		ft_putnbr(unsigned int n);
 int		ft_putui(unsigned int u);
 int		ft_putlower(unsigned int n);
 int		ft_putupper(unsigned int n);
+int		ft_protect(unsigned int n, int x, int (*f) (unsigned int));
 #endif
