@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 
 #include "../lib/ft_printf.h"
+
 int	ft_putpointer(unsigned long ptr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (ptr >= 16)
