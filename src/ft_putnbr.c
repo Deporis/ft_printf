@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 19:33:02 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/29 17:37:53 by msindreu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../lib/ft_printf.h"
 
-int ft_putnbr(unsigned int n)
+int	ft_putnbr(unsigned int n)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	i = n;
 	len = 0;

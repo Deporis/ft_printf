@@ -1,23 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msindreu <msindreu@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 19:33:02 by msindreu          #+#    #+#             */
+/*   Updated: 2022/06/29 17:37:53 by msindreu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../lib/ft_printf.h"
+
 int	ft_putlower(unsigned int n)
 {
-	int len;
-	int div;
-	int mod;
+	int	len;
 
 	len = 0;
-	div = 0;
-	mod = 0;
 	if (n >= 16)
-	{
-		div = ft_putlower(n / 16);
-		if (div == -1)
-			return (-1);
-		mod = ft_putlower(n % 16);
-		if (mod == -1)
-			return (-1);
-		return (div + mod);
-	}
+		return (ft_protect(n, 16, ft_putlower));
 	else
 	{
 		if (n < 10)
