@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ainga-ri <ainga-ri@student.42barcel>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/08/02 21:15:18 by ainga-ri          #+#    #+#              #
+#    Updated: 2022/08/02 21:19:24 by ainga-ri         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME =		libftprintf.a
 
 SRCS =		src/ft_check.c src/ft_printf.c src/ft_putchar.c src/ft_putlower.c src/ft_putnbr.c src/ft_putpointer.c src/ft_putstr.c src/ft_putui.c src/ft_putupper.c src/ft_protect.c
@@ -27,15 +39,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY: all clean fclean re
-#NAME = libftprintf.a
-
-#CC = gcc
-
-#CFLAGS = -Wall -Wextra -Wextra
-
-#SRC = test.c
-
-#OBJS = $(SRCS:.C=.O)
-
-#%.o : %.c libftprintf.h
-#	$(CC) $(CFLAGS) -I./ -c $< -o $@
